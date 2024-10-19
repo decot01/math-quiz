@@ -7,6 +7,74 @@
     font-family: "Moncerat",sans-serif;
   
     }
+
+
+  .name{
+    display: flex;
+    font-size: 32px;
+    font-weight: 900;
+    color: #E6E6E6;
+    white-space: nowrap
+  } 
+  .author{
+    white-space: nowrap;
+    line-height: 40px;
+    font-size: 32px;
+    font-weight: 900;
+    color: #191919;
+    background-image: linear-gradient(to right, #00BA13 0%, #DBFF00 46%, #7BDB00 100%);
+    cursor: pointer;
+  }
+  .author:hover{
+    font-size: 40px;
+    font-weight: 1000;
+    transform: scale(0.9);
+    transition-duration: 0.4s;
+    transition: 0.4s;
+    cursor: pointer;
+    
+  }
+  .author:active {
+    transition-property: box-shadow, transform;
+    box-shadow: none;
+    transform: none;
+}
+  
+
+
+  .start-btn{
+    width:214px;
+    height:56px;
+    margin-top: 40px;
+    padding-top: 16px;
+    padding-right: 80px;
+    padding-bottom:16px;
+    padding-left: 80px;
+    line-height: 24px;
+    font-size: 40px;
+    font-weight: 900;
+    text-align: center;
+    background-color: #E6E6E6;    
+    color: #1A1A1A;
+    cursor: pointer;
+  }
+  .start-btn:before {
+    content: "start";
+
+    animation: pulse 3s linear;
+  }
+  .start-btn:hover{
+    transform: scale(1.20);
+    transition-duration: 0.2s;
+    transition: 0.2s;
+
+  }
+  .start-btn:active {
+      transition-property: box-shadow, transform;
+      box-shadow: none;
+      transform: none;
+  }
+
   .container{
     display: flex;
     align-items: center;
@@ -15,20 +83,29 @@
   }
   
   .qest{
-  font-size: 90px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    color: #E6E6E6;
+    line-height: 40px;
+    font-size: 32px;
+    font-weight: 900;
   
   }
   
   .row{
-  display: flex;
-  box-sizing: border-box;
+    display: flex;
+    box-sizing: border-box;
+    flex-wrap: wrap;
   }
   
   .answer{
     width: 65px;
     height: 65px;
-    border: 1px solid black;
-    border-radius: 5px;
+    line-height: 25px;
+    font-size: 20px;
+    font-weight: 900;
+    color: #191919;
+    background-color: #E6E6E6;
     margin: 5px;
     display: flex;
     align-items: center;
@@ -40,6 +117,7 @@
       transform: scale(1.20);
       transition-duration: 0.2s;
       transition: 0.3s;
+
   }
   .answer:active {
       transition-property: box-shadow, transform;
@@ -47,30 +125,6 @@
       transform: none;
   }
 
-  .start-btn{
-    font-size: 30px;
-    padding: .5em;
-    border-radius: 5px;
-    border: 1px solid black;
-      cursor: pointer;
-  }
-  .start-btn:before {
-    content: "Начать";
-    animation: pulse 123123123123s linear;
-  }
-  .start-btn:hover{
-      transform: scale(1.20);
-      transition-duration: 0.2s;
-      transition: 0.2s;
-  
-  }
-  .start-btn:active {
-      transition-property: box-shadow, transform;
-      box-shadow: none;
-      transform: none;
-  }
-  
-  
   @keyframes pulse {
     0% {
       transform: scale(1.10);
