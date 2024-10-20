@@ -84,6 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
     start_btn.addEventListener('click', function () {
         container_start.style.display = 'none';
         container_main.style.display = 'flex';
+        h3class.style.display = 'none';
         counterRel = 0;
         right = 0;
 
@@ -91,6 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
             let statistics = (right / counterRel) * 100 || 0; // Avoid NaN
             statistics = Math.round(statistics);
             h3class.innerHTML = `Вы ответили верно на ${right} из ${counterRel}, ваш процент правильных ответов: ${statistics}%`;
+            h3class.style.display = 'flex';
             container_start.style.display = 'flex';
             container_main.style.display = 'none';
         }, 10000);

@@ -1,18 +1,39 @@
 @font-face {
     font-family: "Moncerat",sans-serif;
-    src: url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap")
+    src: url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap")
   
   } 
   *{
-    font-family: "Moncerat",sans-serif;
-  
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
     }
-
-
+  body {
+    display: flex;
+    justify-content: center;
+  }
+  .h3class {
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 40px;
+    color: #E6E6E6;
+    display: none;/*Add in js to change the parameter*/
+  }
+  .start{
+    width:fit-content;
+    height:fit-content;
+    margin: auto; 
+    top: 50%;
+  }
   .name{
+    display:inline-block;/*Add in js to change the parameter*/
+    margin: 0;
+    height:fit-content;
     display: flex;
     font-size: 32px;
     font-weight: 900;
+    line-height: 40px;
     color: #E6E6E6;
     white-space: nowrap
   } 
@@ -20,16 +41,17 @@
     white-space: nowrap;
     line-height: 40px;
     font-size: 32px;
-    font-weight: 900;
+    font-weight: 900; 
     color: #191919;
     background-image: linear-gradient(to right, #00BA13 0%, #DBFF00 46%, #7BDB00 100%);
     cursor: pointer;
   }
+
   .author:hover{
+
     font-size: 40px;
     font-weight: 1000;
-    transform: scale(0.9);
-    transition-duration: 0.4s;
+    transition-duration: 0.5s;
     transition: 0.4s;
     cursor: pointer;
     
@@ -81,15 +103,23 @@
     justify-content: center;
     flex-direction: column;
   }
+
+  .main{
+    width:fit-content;
+    height:fit-content;
+    margin: auto; 
+    top: 50%;
+    display: none;
+  }  
   
   .qest{
-    margin-top: 100px;
-    margin-bottom: 50px;
+    margin-top: 0;
+    margin-bottom: 40px;
     color: #E6E6E6;
     line-height: 40px;
     font-size: 32px;
     font-weight: 900;
-  
+    flex-direction: row;
   }
   
   .row{
@@ -99,20 +129,21 @@
   }
   
   .answer{
-    width: 65px;
-    height: 65px;
+    width: 70px;
+    height: 70px;
     line-height: 25px;
     font-size: 20px;
     font-weight: 900;
     color: #191919;
     background-color: #E6E6E6;
-    margin: 5px;
+    margin: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     transform: none;
     cursor: pointer;
   }
+
   .answer:hover{
       transform: scale(1.20);
       transition-duration: 0.2s;
@@ -143,6 +174,3 @@
     }
   }
   
-  .main{
-    display: none;
-  }
