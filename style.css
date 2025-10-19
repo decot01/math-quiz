@@ -23,19 +23,35 @@
     background-color:var(--background-color);
     /*background-color:#E6E6E6;*/
   }
+  /*
+    background-image: linear-gradient(to right, #00BA13 0%, #DBFF00 46%, #7BDB00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+*/
+
+
 
   body[data-theme="dark"] .author {
     color: #1A1A1A;
     -webkit-background-clip: initial;
     -webkit-text-fill-color: initial;
   }
-
   body[data-theme="light"] .author {
-    background-image: linear-gradient(to right, #00BA13 0%, #DBFF00 46%, #7BDB00 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
+    background:
+    linear-gradient(to right, #00BA13 0%, #DBFF00 46%, #7BDB00 100%),
+    linear-gradient(to right, #1A1A1A 0%, #1A1A1A 100%);
+  -webkit-background-clip: text, padding-box;
+  -webkit-text-fill-color: transparent;
   }
+  body[data-theme="dark"] input{
+    color: #1A1A1A;
+  }
+  body[data-theme="light"] input{
+    color: #E6E6E6;
+  } 
+
+
+
   .h3class {
     font-size: 32px;
     font-weight: 900;
@@ -43,6 +59,10 @@
     color: var(--primary-color);
     display: none;/*Add in js to change the parameter*/
   }
+  .h3class p {
+    margin-bottom: 2px; /* Устанавливает отступ 5px под каждым <p> */
+    /* Дополнительно: убрать отступ у последнего <p>, чтобы не было лишнего снизу */
+}
   .start{
     width:fit-content;
     height:fit-content;
@@ -105,7 +125,7 @@
 
 
   input {
-    width: 80%;
+    width: 300px;
     margin-top: 25px;
     padding: 5px 10px 10px 5px;
     margin-bottom: 10px;
@@ -135,6 +155,9 @@
     background-color: var(--primary-color);    
     color: var(--background-color);
     cursor: pointer;
+    min-width: 214px; /* Сохраняем минимальную ширину, чтобы кнопка не была слишком узкой */
+    padding-left: 20px; /* Уменьшаем внутренние отступы */
+    padding-right: 20px; /* Уменьшаем внутренние отступы */
   }
   .start-btn:before {
     content: "start";
